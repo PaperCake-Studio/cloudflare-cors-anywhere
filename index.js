@@ -138,7 +138,7 @@ addEventListener("fetch", async event => {
                     "          1,000 requests/10 minutes\n\n" +
                     (originHeader !== null ? "Origin: " + originHeader + "\n" : "") +
                     "IP: " + connectingIp + "\n" +
-                    (country ? "Country: " + country + "\n" : "") +
+                    (country ? "Country / Region: " + country + "\n" : "") +
                     (colo ? "Datacenter: " + colo + "\n" : "") +
                     "\n" +
                     (customHeaders !== null ? "\nx-cors-headers: " + JSON.stringify(customHeaders) : ""),
