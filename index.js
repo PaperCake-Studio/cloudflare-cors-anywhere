@@ -72,7 +72,10 @@ addEventListener("fetch", async event => {
             }
 
             if (originUrl.search.startsWith("?")) {
-                const filteredHeaders = {};
+                var filteredHeaders = {
+                    "Content-Type": "application/json;charset=utf-8",
+                    "Accept": "application/json, text/plain, */*",
+                };
                 for (const [key, value] of event.request.headers.entries()) {
                     if (
                         (key.match("^origin") === null) &&
